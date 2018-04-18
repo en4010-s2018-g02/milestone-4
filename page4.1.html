@@ -1,0 +1,106 @@
+<!DOC html>
+<html>
+    <style>
+       
+        
+        
+        .flex-container {
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: center;
+            width: 400px;
+            height: 700px;
+            margin:auto;
+           
+            background-color: lightgrey;
+            text-align: center;
+            
+
+        }
+        /*<picture >
+        <source srcset="EWresized.jpg" media="(max-width: 600px)">
+        <source srcset="EEresized.jpg" media="(max-width: 600px)">
+    </picture>*/
+        
+
+        footer {color:white;}
+        text-shadow: -1px 0 black,0 1px black,1px 0 black,0 -1px black;}
+       
+    </style>
+    <body>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <ul class="nav nav-pills  navbar-expand-sm bg-white" >
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black">Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black">Teacher</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black">Class Labs</a>
+            </li>
+
+        </ul>
+        <div class="d-none d-lg-block">
+            <img src="EWresized.jpg" alt="EW" style= "float:left visible-lg;width: 489px;height: 100%;" >
+        </div>
+            <div class="flex-container">
+                <div class="row" style="justify-content: space-around">
+
+                    <div class="col-sm">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-education" style="font-size: 30px;color:black;"></span>
+                    </a>
+                    <footer> Solder</footer> 
+                </div>
+                <div class="col-sm">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-user" style="font-size: 30px; color:black;"></span>
+
+                    </a>
+                    <footer> CNC</footer>
+                </div>
+                <div class="col-sm">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-lock" style="font-size: 30px; color: black;"></span>
+
+                    </a>
+                    <footer>Workbench</footer> 
+                </div>
+                </div>
+
+                    <form action="page4php.php" method="post" style="margin-top: 200px;margin-right: 160px;">
+
+                        <div class="form-group col-l" >
+
+                            <select class="form-control" id="labuse" placeholder= "What are you using the lab for?">
+                                <option>Class Lab</option>
+                                <option>Personal Use</option>
+                            </select>
+                            <select class="form-control" placeholder= "Where do you want to work?" id="labloc">
+                                <option>Engineering East</option>
+                                <option>Engineerng West</option>
+                            </select>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder= "enter your z number" id="znumber">
+                            </div>
+                            <p>Do you swear to use the lab responsibly and ethically?</p>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox"> I agree to the lab terms and conditions
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Request</button>
+                        </div>
+                    </form>
+                
+            </div>
+        
+        <div class="d-none d-lg-block">
+            <img src="EEresized.jpg" alt="EE" style="float: right;hidden-sm;width: 489px;height: 100%;">
+        </div>
+    </body>
+</html>
