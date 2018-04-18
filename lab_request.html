@@ -1,103 +1,88 @@
-<!DOCTYPE html>
 
+<!DOC html>
 <html>
-
     <style>
-        form {
-            border: 3px solid #f1f1f1;
-        }
 
-        input[type=text], input[type=password] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
 
-        button {
-            background-color: blue;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
+        .flex-container {
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: center;
+            width: 400px;
+            height: 700px;
+            margin:auto;
 
-        button:hover {
-            opacity: 0.8;
-        }
-
-        .cancelbtn {
-            width: auto;
-            padding: 10px 18px;
-            background-color: #f44336;
-        }
-
-        .imgcontainer {
+            background-color: lightgrey;
             text-align: center;
-            margin: 24px 0 12px 0;
+
+
         }
 
-        img.avatar {
-            width: 40%;
-            border-radius: 50%;
-        }
 
-        .container {
-            padding: 16px;
-        }
 
-        span.psw {
-            float: right;
-            padding-top: 16px;
-        }
-
-        /* Change styles for span and cancel button on extra small screens */
-        @media screen and (max-width: 300px) {
-            span.psw {
-                display: block;
-                float: none;
-            }
-            .cancelbtn {
-                width: 100%;
+        footer {color:white;}
+        text-shadow: -1px 0 black,0 1px black,1px 0 black,0 -1px black;}
+        @media screen and (max-width: 700px) {
+            .flex-container{
+                flex-direction: column;
+                margin-top: 50px;
             }
         }
     </style>
     <body>
 
-        <h3>Lab Registration</h3>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <ul class="nav nav-pills  navbar-expand-sm bg-white" >
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black">Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black">Teacher</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black">Class Labs</a>
+            </li>
 
-        <form action="lab_info.php" method="POST">
-            <div class="imgcontainer">
-                <img src="florida_atlantic_football.png" alt="Avatar" class="avatar">
-            </div>
+        </ul>
+        <div class="d-none d-lg-block">
+            <img src="EWresized_resized.jpg" alt="EW" style= "float:left visible-lg;width: 489px;height: 100%;" >
+        </div>
+        <div class="flex-container">
+            <div class="row" style="justify-content: space-around">
 
-            <div class="container">
-                <label><b>Z-number</b></label>
-                <input type="text" placeholder="Enter znumber" name="znumber" required>
 
-                <label><b>Classname</b></label>
-                <input type="text" placeholder="Enter class" name="classname" required>
+            <form action="lab_info.php" method="POST" style="margin-top: 300px;margin-right: 30px;">
 
-                <input type="submit" name="submit" value="Add" onclick="myfunction()">
+                <div class="form-group" >
+                    
+                    <input type="text" placeholder="Enter znumber" name="znumber" required>
+
+                </div>
+                    <br>
+                    <div class="form-group">
+                        
+                        <input type="text" placeholder="What class are you using the lab for?" name="classname" required>
+                    </div>
+                    <br>
+                    <p>Do you swear to use the lab responsibly and ethically?</p>
+                   
+                
                 <input type="checkbox" > I agree to the term and conditions of the lab
+                <br>
+                <button type="submit" class="btn btn-primary" name="submit" value="Add" onclick="myfunction()">Submit</button>
+               
+            </form>
             </div>
+        </div>
 
-            <div class="container" style="background-color:lightgray">
-
-            </div>
-        </form>
-
-        <script>
-            function myFunction(){
-                alert("Inserted!");
-            }
-        </script>
-
-
-
+        <div class="d-none d-lg-block">
+            <img src="EEresized_resized.jpg" alt="EE" style="float: right;hidden-sm;width: 489px;height: 100%;">
+        </div>
     </body>
 </html>
+
+       
+
+   
