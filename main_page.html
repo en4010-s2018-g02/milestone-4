@@ -3,17 +3,24 @@
     <style>
         ul{
             border: 2px solid #000;
+            width: 100%;
+            
+        }
+        img{
+           max-width: 100%; 
         }
         .flex-container {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            margin-top: 200px;
+            justify-content:center;
+            margin-top: -400px;
             text-align: center;
-             
+
+
+
         }
-        
-        
+
+
         footer {color:white;}
         @media screen and (max-width: 700px) {
             .flex-container{
@@ -29,7 +36,9 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     
+  
     <ul class="nav nav-pills  navbar-expand-sm bg-white" >
+        <img src="faulogo.png" alt="FAU" style="width: 200px;height: 75px;">
         <li class="nav-item">
             <a class="nav-link " href="#" style="color: black">Students</a>
         </li>
@@ -41,36 +50,40 @@
         </li>
         
     </ul>
-    
    
+    
+    <div class="d-none d-lg-block">
+        <img src="EWresized_resized.jpg" alt="EW" style= "float:left visible-lg;width: 860px;height: 100%;" >
+    </div>
     <div class="flex-container">
-       
-        
-               <div padding="50px">
-                  
-                   <a href="#">
-                <span class="glyphicon glyphicon-education" style="font-size: 100px; color: white"></span>
-                </a>
-                  <footer> Student</footer> 
-        </div>
-        <div padding="50px">
-            <a href="#">
-                <span class="glyphicon glyphicon-user" style="font-size: 100px; color: white"></span>
-                
-            </a>
-            <footer> Class Labs</footer>
-        </div>
-        <div padding="50px">
-            <a href="#">
-                <span class="glyphicon glyphicon-lock" style="font-size: 100px; color:white"></span>
-            
-            </a>
-            <footer>Administrators</footer> 
-        </div>
-        
-        
+        <!--<div class="row" style="justify-content: space-around">-->
 
-       
+            <div class="col-sm">
+                <a href="#">
+                    <span class="glyphicon glyphicon-education" style="font-size: 50px;color:white;"></span>
+                </a>
+                <footer> Student</footer> 
+            </div>
+            <div class="col-sm">
+                <a href="#">
+                    <span class="glyphicon glyphicon-user" style="font-size: 50px; color:white;"></span>
+
+                </a>
+                <footer> Class Labs</footer>
+            </div>
+            <div class="col-sm">
+                <a href="#">
+                    <span class="glyphicon glyphicon-lock" style="font-size: 50px; color: white;"></span>
+
+                </a>
+                <footer>Administrators</footer> 
+            </div>
+        </div>
+
+    <!--</div>-->
+
+    <div class="d-none d-lg-block">
+        <img src="EEresized_resized.jpg" alt="EE" style="float: right;hidden-sm;width: 850px;height: 100%;margin-top: -495px;">
     </div>
 </body>
     
