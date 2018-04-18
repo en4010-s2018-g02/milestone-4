@@ -1,0 +1,88 @@
+
+<!DOC html>
+<html>
+    <style>
+
+
+        .flex-container {
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: center;
+            width: 400px;
+            height: 700px;
+            margin:auto;
+
+            background-color: lightgrey;
+            text-align: center;
+
+
+        }
+
+
+
+        footer {color:white;}
+        text-shadow: -1px 0 black,0 1px black,1px 0 black,0 -1px black;}
+        @media screen and (max-width: 700px) {
+            .flex-container{
+                flex-direction: column;
+                margin-top: 50px;
+            }
+        }
+    </style>
+    <body>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <ul class="nav nav-pills  navbar-expand-sm bg-white" >
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black">Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black">Teacher</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black">Class Labs</a>
+            </li>
+
+        </ul>
+        <div class="d-none d-lg-block">
+            <img src="EWresized_resized.jpg" alt="EW" style= "float:left visible-lg;width: 489px;height: 100%;" >
+        </div>
+        <div class="flex-container">
+            <div class="row" style="justify-content: space-around">
+
+
+            <form action="lab_info.php" method="POST" style="margin-top: 300px;margin-right: 30px;">
+
+                <div class="form-group" >
+                    
+                    <input type="text" placeholder="Enter znumber" name="znumber" required>
+
+                </div>
+                    <br>
+                    <div class="form-group">
+                        
+                        <input type="text" placeholder="What class are you using the lab for?" name="classname" required>
+                    </div>
+                    <br>
+                    <p>Do you swear to use the lab responsibly and ethically?</p>
+                   
+                
+                <input type="checkbox" > I agree to the term and conditions of the lab
+                <br>
+                <button type="submit" class="btn btn-primary" name="submit" value="Add" onclick="myfunction()">Submit</button>
+               
+            </form>
+            </div>
+        </div>
+
+        <div class="d-none d-lg-block">
+            <img src="EEresized_resized.jpg" alt="EE" style="float: right;hidden-sm;width: 489px;height: 100%;">
+        </div>
+    </body>
+</html>
+
+       
+
+   
