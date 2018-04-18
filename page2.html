@@ -1,0 +1,87 @@
+<!DOC html>
+<html>
+    <style>
+        ul{
+            border: 2px solid #000;
+        }
+        body{
+            background-image: url('adbg.jpg');
+            background-size: cover;
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 200px;
+            text-align: center;
+
+
+
+        }
+
+
+        footer {color:white;}
+        @media screen and (max-width: 700px) {
+            .flex-container{
+                flex-direction: column;
+                margin-top: 50px;
+            }
+        }
+    </style>
+    <body>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <ul class="nav nav-pills  navbar-expand-sm bg-white" border=20px solid #000 >
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black;">Students</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black;">Administrators</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black;">Class Labs</a>
+            </li>
+
+        </ul>
+
+
+        <div class="flex-container">
+
+
+            <div padding="50px">
+
+                <a href="#">
+                    <span class="glyphicon glyphicon-lock" style="font-size: 100px;color:white;"></span>
+                </a>
+                <footer> Edit Admins</footer> 
+            </div>
+            <div padding="50px">
+                <a href="#">
+                    <span class="glyphicon glyphicon-calendar" style="font-size: 100px; color:white;"></span>
+
+                </a>
+                <footer> Edit Class</footer>
+            </div>
+            <div padding="50px">
+                <a href="#">
+                    <span class="glyphicon glyphicon-apple" style="font-size: 100px; color: white;"></span>
+
+                </a>
+                <footer>Edit TA's</footer> 
+            </div>
+            <div padding="50px">
+                <a href="#">
+                    <span class="glyphicon glyphicon-education" style="font-size: 100px; color: white;"></span>
+
+                </a>
+                <footer>Edit Students</footer> 
+            </div>
+
+        </div>
+    </body>
+
+</html>
