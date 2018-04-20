@@ -1,14 +1,11 @@
 
-    
-<?php
-require page5.html;
-?>
-
 
     <ul>
         <?php
-
-        $query=mysqli_query("SELECT 'name','znumber','class_crn','classname' FROM 'znumber' WHERE 'znumber'=('$_POST[znumber]')"
+        require ('page5.html');
+        $link = sqli_connect("lamp.eng.fau.edu","CEN4010_S2018g02","cen4010_s2018","CEN4010_S2018g02");
+        
+        $query=mysqli_query($link,"SELECT 'name','znumber','class_crn','classname' FROM module3 WHERE 'znumber'=('$_POST[znumber]')")
                             while (($row= mysql_fetch_assoc($query)) != false){
                                 echo '<li>',$row['name'],'</li>';
                                 echo '<li>',$row['znumber'],'</li>';
