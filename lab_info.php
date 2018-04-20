@@ -12,9 +12,9 @@ if(isset($_POST['submit'])){
     }
     mysqli_select_db($conn,"CEN4010_S2018g02");
 
-    $sql="INSERT INTO module3(znumber,classname) VALUES ('$_POST[znumber]','$_POST[classname]')";
+    $sql="INSERT INTO module3(name,znumber,class_crn,classname) VALUES ('$_POST[name]','$_POST[znumber]','$_POST[class_crn]','$_POST[classname]')";
 
-    mysqli_query($conn,"INSERT INTO module3(znumber,classname) VALUES ('$_POST[znumber]','$_POST[classname]')");
+    mysqli_query($conn,"INSERT INTO module3(name,znumber,class_crn,classname) VALUES ('$_POST[name]','$_POST[znumber]','$_POST[class_crn]','$_POST[classname]')");
    
     mysqli_close($conn);
     sleep(5);
