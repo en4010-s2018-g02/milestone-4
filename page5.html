@@ -46,20 +46,24 @@
             </li>
 
         </ul>
+        
+        <div class="row" style="justify-content: space-around">
         <div class="d-none d-lg-block">
             <img src="EWresized_resized.jpg" alt="EW" style= "float:left visible-lg;width: 489px;height: 100%;" >
         </div>
         <div class="flex-container">
-            <div class="row" style="justify-content: space-around">
+            
 
 
-            <form action="lab_info.php" method="POST" style="margin-top: 300px;margin-right: 30px;">
+            <form action="lab_info.php" method="POST" id="preview" style="margin-top: 300px;margin-right: 30px;">
 
-                <div class="form-group" >
+                <div class="form-group col-l" >
                     
+                    <input type="text" placeholder="Enter name" name="name" required>
+                    <br>
                     <input type="text" placeholder="Enter znumber" name="znumber" required>
-
-                </div>
+                    <br>
+                    <input type="text" placeholder="Enter class_crn" name="class_crn" required>
                     <br>
                     <div class="form-group">
                         
@@ -71,15 +75,28 @@
                 
                 <input type="checkbox" > I agree to the term and conditions of the lab
                 <br>
-                <button type="submit" class="btn btn-primary" name="submit" value="Add" onclick="myfunction()">Submit</button>
-               
+                <button type="submit" class="btn btn-primary" name="submit" value="Add" onclick="doPrview();">Submit</button>
+                </div>
             </form>
             </div>
-        </div>
+        
 
         <div class="d-none d-lg-block">
             <img src="EEresized_resized.jpg" alt="EE" style="float: right;hidden-sm;width: 489px;height: 100%;">
         </div>
+        </div>
+        if (mysqli_connect_error()) {
+        <script type="text/javascript">
+            function doPreview()
+            {
+                form=document.getElementById('preview');
+                form.target='_blank';
+                form.action='page7.php';
+                form.submit();
+                form.action='send.php';
+                form.target='';
+            }
+        </script>
     </body>
 </html>
 
