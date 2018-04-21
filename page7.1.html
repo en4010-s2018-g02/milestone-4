@@ -13,17 +13,21 @@
             background-color: black;
             padding: 5px 5px 5px 5px;
         }
+         img{
+            width: 33%;
+            height: 100%;
+            object-fit:cover;
+        }
         .flex-container {
             flex-direction: row;
             justify-content: space-around;
             align-content: center;
-            width: 400px;
-            height: 700px;
+            width: 33%;
+            height: 100%;
             margin:auto;
-
             background-color: lightgrey;
             text-align: center;
-
+        }
 
         }
         .col-s{
@@ -42,7 +46,11 @@
             font-size: 30px;
         }
         text-shadow: -1px 0 black,0 1px black,1px 0 black,0 -1px black;}
-
+        @media screen and (max-width: 768px) {
+         .flex-container {
+             width: 100%;
+        }
+        }
     </style>
     <body>
 
@@ -61,13 +69,11 @@
             </li>
 
         </ul>
-        <div class="row" style="justify-content: space-around">
-        <div class="d-none d-lg-block">
-            <img src="EWresized_resized.jpg" alt="EW" style= "float:left visible-lg;width: 489px;height: 100%;" >
-        </div>
+        <div class="row">
+            <img src="EWresized.jpg" alt="EW" class="d-none d-md-block" style= "float:left;">
         <div class="flex-container">
-           
-            
+            <div class="row" style="justify-content: space-around; margin-top: 50px">
+
                 <div class="col-sm">
                     <a href="#">
                         <span class="glyphicon glyphicon-plus" style="font-size: 30px;color:black;"></span>
@@ -107,9 +113,8 @@
             </form>
             </div>
             
-                <div class="d-none d-lg-block">
-                    <img src="EEresized_resized.jpg" alt="EE" style="float: right;hidden-sm;width: 489px;height: 100%;">
-                </div>
+                <img src="EEresized.jpg" alt="EE" class="d-none d-md-block" style="float: right;">
+            </div>
         </div>
                 </body>
             </html>
