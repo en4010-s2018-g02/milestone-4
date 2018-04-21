@@ -2,28 +2,50 @@
 <html>
     <style>
 
-
+        img{
+            width: 33%;
+            height: 100%;
+            object-fit:cover;
+        }
         .flex-container {
             flex-direction: row;
             justify-content: space-around;
             align-content: center;
-            width: 400px;
-            height: 700px;
+            width: 33%;
+            height: 100%;
             margin:auto;
 
             background-color: lightgrey;
             text-align: center;
 
-
         }
-    
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
 
 
-        footer {color:white;}
-        text-shadow: -1px 0 black,0 1px black,1px 0 black,0 -1px black;}
-
+        footer {
+            color:white;
+            text-shadow: -1px 0 black,0 1px black,1px 0 black,0 -1px black;}
+        @media screen and (max-width: 768px) {
+         .flex-container {
+             width: 100%;
+        }
+        }
+            
     </style>
     <body>
+        
+        
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -40,27 +62,25 @@
             </li>
 
         </ul>
-        <div class="row" style="justify-content: space-around">
-        <div class="d-none d-lg-block">
-            <img src="EWresized.jpg" alt="EW" style= "float:left visible-lg;width: 489px;height: 100%;" >
-        </div>
+        <div class="row">
+            <img src="EWresized.jpg" alt="EW" class="d-none d-md-block" style= "float:left;">
         <div class="flex-container">
             <div class="row" style="justify-content: space-around; margin-top: 50px">
 
-                <div class="col-sm">
+                <div class="col-sm-4">
                     <a href="#">
                         <span class="glyphicon glyphicon-fire" style="font-size: 30px;color:black;"></span>
                     </a>
                     <footer> Solder</footer> 
                 </div>
-                <div class="col-sm">
+                <div class="col-sm-4">
                     <a href="#">
                         <span class="glyphicon glyphicon-wrench" style="font-size: 30px; color:black;"></span>
 
                     </a>
                     <footer> CNC Tools</footer>
                 </div>
-                <div class="col-sm">
+                <div class="col-sm-4">
                     <a href="#">
                         <span class="glyphicon glyphicon-flash" style="font-size: 30px; color: black;"></span>
 
@@ -98,10 +118,7 @@
             </form>
 
         </div>
-
-        <div class="d-none d-lg-block">
-            <img src="EEresized.jpg" alt="EE" style="float: right;hidden-sm;width: 489px;height: 100%;">
-            </div>
+            <img src="EEresized.jpg" alt="EE" class="d-none d-md-block" style="float: right;">
             </div>
     </body>
 </html>
