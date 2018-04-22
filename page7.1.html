@@ -1,11 +1,11 @@
 <!DOC html>
 <html>
     <style type="text/css">
-        
+
         .countdown{
             position: absolute;
-            top:15%;
-            left: 45%;
+            top:-20%;
+            left: 48%;
             margin-top: 180px;
             transform: translateX(-45%) translateY(50%);
             color: skyblue;
@@ -13,13 +13,13 @@
             background-color: black;
             padding: 5px 5px 5px 5px;
         }
-         img{
+        img{
             width: 33%;
             height: 100%;
             object-fit:cover;
         }
         .flex-container {
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-around;
             align-content: center;
             width: 33%;
@@ -36,8 +36,8 @@
             margin-top: 100px;
         }
         .col-sm{
-           top:10%;
-            left:35%;
+            top:10%;
+            left:5%;
             margin-top: 100px;
         }
 
@@ -48,10 +48,13 @@
         .remainingTime{
             font-size: 30px;
         }
-        @media screen and (max-width: 768px) {
-         .flex-container {
-             width: 100%;
+        .btn btn-primary{
+            top: 55%;
         }
+        @media screen and (max-width: 768px) {
+            .flex-container {
+                width: 100%;
+            }
         }
     </style>
     <body>
@@ -73,49 +76,49 @@
         </ul>
         <div class="row">
             <img src="EWresized.jpg" alt="EW" class="d-none d-md-block" style= "float:left;">
-        <div class="flex-container">
-            <div class="row" style="justify-content: space-around; margin-top: 50px">
+            <div class="flex-container">
+                <div class="row" style="justify-content: space-around; margin-top: 50px">
 
-                <div class="col-sm">
-                    <a href="#">
-                        <span class="glyphicon glyphicon-plus" style="font-size: 30px;color:black;"></span>
-                    </a>
-                    <footer> Add more time</footer> 
-                </div>
-                <div class="col-sm">
-                    <a href="#">
-                        <span class="glyphicon glyphicon-plus" style="font-size: 30px; color:black;"></span>
+                    <div class="col-sm">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-plus" style="font-size: 30px;color:black;"></span>
+                        </a>
+                        <footer> Add more time</footer> 
+                    </div>
+                    <div class="col-sm">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-plus" style="font-size: 30px; color:black;"></span>
 
-                    </a>
-                    <footer> End Session</footer>
+                        </a>
+                        <footer> End Session</footer>
+                    </div>
                 </div>
-                </div>
-            <div class="col-s">
-            <script type="text/javascript">
-                    function countDown(secs,elem) {
-                        var element = document.getElementById(elem);
-                        element.innerHTML = "Remaining Time: "+secs+"seconds";
-                        if(secs<1){
-                            clearTimeout(timer);
-                            element.innerHTML = '<h2>Countdown Complete!</h2>';
-                            
+                <div class="col-s">
+                    <script type="text/javascript">
+                        function countDown(secs,elem) {
+                            var element = document.getElementById(elem);
+                            element.innerHTML = "Remaining Time: "+secs+"seconds";
+                            if(secs<1){
+                                clearTimeout(timer);
+                                element.innerHTML = '<h2>Countdown Complete!</h2>';
+
+                            }
+                            secs--;
+                            var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
+
+
                         }
-                        secs--;
-                        var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
-                        
-                        
-                    }
-            
-            </script>
-                
-                <div id="status" class="countdown"></div>
-            <script type="text/javascript">countDown(1200,"status");</script>
+
+                    </script>
+
+                    <div id="status" class="countdown"></div>
+                    <script type="text/javascript">countDown(1200,"status");</script>
                 </div>
-            <form action="page7.php" method="get">
-              <button type="submit" class="btn btn-primary" name="submit" value="Add">Show student details</button>
-            </form>
+                <form action="page7.php" method="get";>
+                    <button type="submit" class="btn btn-primary" name="submit" value="Add">Show student details</button>
+                </form>
             </div>
-                <img src="EEresized.jpg" alt="EE" class="d-none d-md-block" style="float: right;">
+            <img src="EEresized.jpg" alt="EE" class="d-none d-md-block" style="float: right;">
         </div>
-     </body>
+    </body>
 </html>
