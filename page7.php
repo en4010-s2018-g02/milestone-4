@@ -149,7 +149,7 @@
                     </tr>";
 <?php
             //Fetch data from database
-            while (($row= mysqli_fetch_assoc($query)) != false){
+            while (($row= mysqli_fetch_assoc($result)) != false){
                 ?>
                 <tr>
                 <td><?php echo $row['name'];?></td>;
@@ -168,9 +168,9 @@
             else{
                 ?>
                     <tr>
-                    <th colspan="2">There isno data!</th>
+                    <th colspan="2">There is no data!</th>
                     </tr>
-                    <?php>
+                    <?php
             }
             ?>
                 
