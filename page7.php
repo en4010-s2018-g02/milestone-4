@@ -1,7 +1,7 @@
 
 
 <?php
-       
+       include ('page4.html');
         if(isset($_POST['submit'])){
             $servername="lamp.cse.fau.edu";
             $username="CEN4010_S2018g02";
