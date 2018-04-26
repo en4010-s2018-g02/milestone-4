@@ -4,74 +4,97 @@
         ul{
             border: 2px solid #000;
             width: 100%;
-            
+
         }
-        img{
-           max-width: 100%; 
-        }
+       
         .flex-container {
-            display: flex;
-            flex-direction: row;
-            justify-content:center;
-            margin-top: -400px;
+            flex-direction: column;
+            align-content: center;
+            justify-content:space-around;
+            width: 33%;
+            height: 100%;
+            margin: auto;
+            background-color: lightgray;
             text-align: center;
 
 
 
         }
 
-
+        img{
+            width: 33%;
+            height: 100%;
+            object-fit:cover;
+        }
+        
         footer {color:white;}
-        @media screen and (max-width: 700px) {
-            .flex-container{
-                flex-direction: column;
-                margin-top: 50px;
+        
+        .col-s{
+            top: 10%;
+            left:25;
+            margin-top: 100px;
+        }
+        
+        .col-sm{
+            top:10%;
+            left:5%;
+            margin-top: 100px;
+        }
+        
+        footer {
+            color:white;
+            text-shadow: -1px 0 black,0 1px black,1px 0 black,0 -1px black;}
+        
+        @media screen and (max-width: 768px) {
+            .flex-container {
+                width: 100%;
             }
         }
+
     </style>
-<body>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <body>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-  
-    <ul class="nav nav-pills  navbar-expand-sm bg-white" >
-        <img src="faulogo.png" alt="FAU" style="width: 200px;height: 75px;">
-        <li class="nav-item">
-            <a class="nav-link " href="#" style="color: black">Students</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link " href="#" style="color: black">Administrators</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link " href="#" style="color: black">Class Labs</a>
-        </li>
-        
-    </ul>
-   
-    
-    <div class="d-none d-lg-block">
-        <img src="EWresized_resized.jpg" alt="EW" style= "float:left visible-lg;width: 860px;height: 100%;" >
-    </div>
-    <div class="flex-container">
-        <!--<div class="row" style="justify-content: space-around">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-            <div class="col-sm">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+        <ul class="nav nav-pills  navbar-expand-sm bg-white" >
+            <img src="faulogo.png" alt="FAU" style="width: 200px;height: 75px;">
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black">Students</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black">Administrators</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" style="color: black">Class Labs</a>
+            </li>
+            <a href="page2.html">Next page</a>
+        </ul>
+
+        <div class="row" style="justify-content: space-around">
+        <div class="d-none d-lg-block">
+            <img src="EWresized_resized.jpg" alt="EW" style= "float:left visible-lg;width: 700px;height: 100%;" >
+        </div>
+        <div class="flex-container">
+            
+
+            <div class="col-s">
                 <a href="#">
                     <span class="glyphicon glyphicon-education" style="font-size: 50px;color:white;"></span>
                 </a>
                 <footer> Student</footer> 
             </div>
-            <div class="col-sm">
+            <div class="col-s">
                 <a href="#">
                     <span class="glyphicon glyphicon-user" style="font-size: 50px; color:white;"></span>
 
                 </a>
                 <footer> Class Labs</footer>
             </div>
-            <div class="col-sm">
+            <div class="col-s">
                 <a href="#">
                     <span class="glyphicon glyphicon-lock" style="font-size: 50px; color: white;"></span>
 
@@ -79,12 +102,13 @@
                 <footer>Administrators</footer> 
             </div>
         </div>
+        
+       
 
-    <!--</div>-->
+        <div class="d-none d-lg-block">
+            <img src="EEresized_resized.jpg" alt="EE" style="float: right;hidden-sm;width: 850px;height: 100%;margin-top: -1300px;">
+        </div>
+        </div>
+    </body>
 
-    <div class="d-none d-lg-block">
-        <img src="EEresized_resized.jpg" alt="EE" style="float: right;hidden-sm;width: 850px;height: 100%;margin-top: -495px;">
-    </div>
-</body>
-    
 </html>
