@@ -20,7 +20,7 @@
         }
 
 
-        footer {color:white;}
+        footer {color:black;}
         @media screen and (max-width: 700px) {
             .flex-container{
                 flex-direction: column;
@@ -45,7 +45,7 @@
             <li class="nav-item">
                 <a class="nav-link " href="#" style="color: black;">Class Labs</a>
             </li>
-
+            <a href="page3.html">Next page</a>
         </ul>
 
 
@@ -57,7 +57,13 @@
                 <a href="#">
                     <span class="glyphicon glyphicon-lock" style="font-size: 100px;color:white;"></span>
                 </a>
-                <footer> Edit Admins</footer> 
+                <footer> Edit Admins</footer>
+                <form action="page2.php" method="POST">
+                    <input type="text" name="admin"  placeholder="Last name of Admin to add">
+                    <button type="submit" class="btn btn-primary" name="submit" value="Insert" >Submit</button><br>
+                    <input type="text" name="delete_admin" placeholder="last name of Admin to delete">
+                    <button type="submit" class="btn btn-primary" name="submit" value="Insert" >Submit</button>
+                </form>
             </div>
             <div padding="50px">
                 <a href="#">
@@ -65,22 +71,35 @@
 
                 </a>
                 <footer> Edit Class</footer>
+                <form action="page2.php" method="post">
+                    <input type="text" name="add_class"  placeholder="name of class to add"><button type="submit" class="btn btn-primary" name="add_class" value="Insert" >Submit</button><br>
+                    <input type="text" name="delete_class" placeholder="name of class to delete"><button type="submit" class="btn btn-primary" name="delete_class" value="Insert" >Submit</button>
+                </form>
             </div>
             <div padding="50px">
                 <a href="#">
                     <span class="glyphicon glyphicon-apple" style="font-size: 100px; color: white;"></span>
 
                 </a>
-                <footer>Edit TA's</footer> 
+                <footer>Edit TA's</footer>
+                <form action="page2.php" method="post">
+                    <input type="text" name="add_ta"  placeholder="last name of ta to add"><button type="submit" class="btn btn-primary" name="add_ta" value="Insert" >Submit</button><br>
+                    <input type="text" name="delete_ta" placeholder="last name of ta to delete"><button type="submit" class="btn btn-primary" name="delete_ta" value="Insert" >Submit</button>
+                </form>
             </div>
             <div padding="50px">
                 <a href="#">
                     <span class="glyphicon glyphicon-education" style="font-size: 100px; color: white;"></span>
 
                 </a>
-                <footer>Edit Students</footer> 
-            </div>
+                <footer>Edit Students</footer>
+                <form action="page2.php" method="post">
+                    <input type="text" name="add_student"  placeholder="last name of student to add"><button type="submit" class="btn btn-primary" name="add_student" value="Insert" >Submit</button><br>
+                    <input type="text" name="delete_student" placeholder="last name of student to delete"><button type="submit" class="btn btn-primary" name="delete_student" value="Insert" >Submit</button>
 
+                </form>
+            </div>
+            
         </div>
     </body>
 
